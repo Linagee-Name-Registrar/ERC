@@ -15,44 +15,27 @@ requires: 4804,  6860
 
 Introduces a new standard that delineates on-chain permanent domains and outlines their utilization for address mapping and decentralized content delivery networks (CDNs) for [ERC-4804](./eip-4804.md).
 
+## Motivation
+
+ERC-4804 defines a `web3://`-scheme RFC 2396 URI to call a smart contract either by its address or a **name** from name service.  If a **name** is specified, the standard specifies a way to resolve the contract address from the name. 
+
 ## Specification
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119 and RFC 8174.
+Given **contractName** and **chainid** from a `web3://` URI defined in ERC-4804, the protocol will find the address of the contract using the following steps:
 
-Contracts wishing to use ERC-5219 as their ERC-4804 resolve mode must implement the following interface:
+1. Find the `contentcontract` text record on ENS resolver on chain **chainid**.  Return an error if the chain does not have ENS or the record is an invalid ETH address.
+2. If the `contentcontract` text record does not exist, the protocol will use the resolved address of **name** from [ERC-137](./eip-137.md#contract-address-interface).
+3. If the resolved address of **name** is the zero address, then return an "address not found" error.
 
-```solidity
-/// @dev IDecentralizedApp is the ERC-5219 interface
-interface IERC5219Resolver is IDecentralizedApp {
-    // @notice The ERC-4804 resolve mode
-    // @dev    This MUST return "5219" (0x3532313900000000000000000000000000000000000000000000000000000000) for ERC-5219 resolution (case-insensitive). The other options, as of writing this, are "auto" for automatic resolution, or "manual" for manual resolution.
-    function resolveMode() external pure returns (bytes32 mode);
-}
-```
+Note that `contentcontract` text record may return an Ethereum address in hexadecimal with a `0x` prefix or an [ERC-3770](./eip-3770.md) chain-specific address.  If the address is an ERC-3770 chain-specific address, then the **chainid** to call the message will be overridden by the **chainid** specified by the ERC-3770 address.
 
 ## Rationale
 
-[ERC-165](./eip-165.md) was not used because interoperability can be checked by calling `resolveMode`.
-
-## Backwards Compatibility
-
-No backward compatibility issues found.
-
-
-## Reference Implementation
-
-```solidity
-abstract contract ERC5219Resolver is IDecentralizedApp {
-    function resolveMode() public pure returns (bytes32 mode) {
-      return "5219";
-    }
-}
-```
-
+The standard uses `contentcontract` text record with ERC-3770 chain-specific address instead of `contenthash` so that the record is human-readable - a design principle of ERC-4804.  Further, we can use the text record to add additional fields such as time to live (TTL).
 
 ## Security Considerations
 
-The security considerations of [ERC-4804](./eip-4804.md#security-considerations) and [ERC-5219](./eip-5219.md#security-considerations) apply.
+No security considerations were found.
 
 ## Copyright
 
