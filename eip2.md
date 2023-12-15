@@ -73,7 +73,7 @@ The Linagee Name Registrar is a comprehensive solution composed of five main com
 	   - ```function wrap(bytes32 _name)``` Must be called after the wrapper is created and after the name is transferred to the wrapper contract. This function creates an erc-721 token to represent the name. Only the owner of the erc-721 token may unwrap the name.
 	   - ```function unwrap(uint256 _tokenId)``` Can only be called by the owner of the erc-721 token. When called the erc-721 token is destroyed, and the linagee name is transferred from the wrapper contract to the caller.
 	   
-4. **The CDN Contract Contract**
+4. **The CDN Contract**
    - The Linagee name **ecdn.og** is permanently linked to a smart contract that operates as a Content Delivery Network (CDN) within the Ethereum ecosystem. Specifically designed to integrate seamlessly with the [EthFS](https://ethfs.xyz/) contract, it empowers developers to efficiently utilize libraries stored on EthFS while adhering to the EIP-4804 standard. By doing so, ecdn.og significantly mitigates the redundancy of data on the blockchain, resulting in cost savings and conservation of valuable chain space.
    - The linking between ecdn.og and the CDN contract is done through the **setTextRecord** function in the Resolver Contract. with the key:value pair being ```contentcontract: 0x4F53Eae17346d6c0f96215Af157c7F8e093E17F1```.
    - ecdn.og is owned by a burn address, making this link **permanent**.
