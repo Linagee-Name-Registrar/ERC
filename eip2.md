@@ -13,7 +13,7 @@ requires: 4804,  6860
 
 ## Abstract
 
-This EIP introduces a new standard that delineates on-chain permanent domain names and outlines their utilization for address mapping and decentralized content delivery networks (CDNs) for [ERC-4804](./eip-4804.md).
+This EIP introduces a new standard that delineates on-chain permanent domain names and outlines their utilization for address mapping and their use in decentralized content delivery networks (CDNs) for [ERC-4804](./eip-4804.md).
 
 ## Motivation
 
