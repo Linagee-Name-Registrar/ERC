@@ -38,7 +38,7 @@ The **permanent** nature of these names make them ideal for securely resolving i
 
 **Linagee Name Registrar Specifications:**
 
-The Linagee Name Registrar is a comprehensive solution composed of five main components, each playing a vital role in enabling permanent, human-readable domain names on the Ethereum blockchain. These components are designed to provide users with control, flexibility, and ease of use:
+The Linagee Name Registrar is a comprehensive solution composed of four main components, each playing a vital role in enabling permanent, human-readable domain names on the Ethereum blockchain. These components are designed to provide users with control, flexibility, and ease of use:
 
 1. **Registrar Contract**
    - The registrar is a fundamental contract that facilitates the registration of names and the mapping of registered names to their respective owner's Ethereum addresses. It forms the core of Linagee Name Registrar, ensuring that each name is associated with its owner.
