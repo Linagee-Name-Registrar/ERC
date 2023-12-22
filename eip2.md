@@ -21,7 +21,7 @@ ERC-4804 defines a `web3://`-scheme RFC 2396 URI to call a smart contract either
 
 The **permanent** nature of these names make them ideal for securely resolving immutable on-chain assets.
 
-# Linagee Name Service Use Cases
+# Use Cases
 1. **Name Resolution**: Linagee Name Registrar offers support for name resolution, enabling users to seamlessly map human-readable names to Ethereum addresses. This flexibility caters to various use cases, from simplified address resolution to more complex on-chain asset resolution. 
 
 	 Linagee names are denoted by the top level domain (TLD) "**.og**".
