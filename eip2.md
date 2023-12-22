@@ -60,7 +60,7 @@ The Linagee Name Registrar is a comprehensive solution composed of four main com
 	   - ```mapping(address => bytes32) public primary; ```
 	   - ```mapping(bytes32 => TextRecords) public userTextRecords;```
 	   - ```function setPrimary(bytes32 _name)``` 
-		   - Allows the user to create a mapping from name to address for a name the own or control
+		   - Allows the user to create a mapping from name to address for a name the own or control.
 	   - ```function setTextRecord(bytes32 _name, string calldata _key, string calldata _value)``` 
 		   - Allows the owner of the name to create a *key: value* mapping associated with a specific name.
 	   - ```function setController(bytes32 _name, address _controller)``` 
