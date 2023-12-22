@@ -26,7 +26,7 @@ The **permanent** nature of these names make them ideal for securely resolving i
 
 	 Linagee names are denoted by the top level domain (TLD) "**.og**".
 
-2. **Permanent Content Delivery Network**: Linagee Name Registrar enables easy access to permanent website storage by linking assets stored within the Ethereum Virtual Machine (EVM) to Linagee names. A prime example is **ecdn.og**, serving as an immutable and irrevocable EthFS Content Delivery Network (CDN) that leverages Linagee's capabilities.
+2. **Permanent Content Delivery Network**: Linagee Name Registrar enables easy access to permanent website storage by linking assets stored within the Ethereum Virtual Machine (EVM) to Linagee names. A prime example is **ecdn.og**, serving as an immutable and irrevocable Ethereum File Storage (EthFS) Content Delivery Network (CDN) that leverages Linagee's capabilities.
 
 3. **Semi-Permanent Assets in calldata**: Linagee Name Registrar empowers users to point their domain names to semi-permanent assets stored in calldata. This feature is explained further in Appendix E.
 
