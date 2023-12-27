@@ -2,7 +2,7 @@
 eip: ####
 title: ERC-#### Linagee Name Registrar and Ethereum Content Delivery Network
 description: Introduces a new standard that delineates on-chain permanent domain names and outlines their utilization for address mapping and decentralized content delivery networks (CDNs).
-author: Mason Keresty (@m_keresty) Derp Herpenstein (derp@derpfinance.com) Chriton (defisummer@gmail.com)
+author: Mason Keresty (linagee.vision@gmail.com) Derp Herpenstein (derp@derpfinance.com) Chriton (defisummer@gmail.com)
 discussions-to: 
 status: Draft
 type: Standards Track
