@@ -22,13 +22,13 @@ ERC-4804 defines a `web3://`-scheme RFC 2396 URI to call a smart contract either
 The **permanent** nature of these names make them ideal for securely resolving immutable on-chain assets.
 
 # Use Cases
-1. **Name Resolution**: Linagee Name Registrar offers support for name resolution, enabling users to seamlessly map human-readable names to Ethereum addresses. This flexibility caters to various use cases, from simplified address resolution to more complex on-chain asset resolution. 
+1. **Name Resolution**: Enables users to seamlessly map human-readable names to Ethereum addresses. This flexibility caters to various use cases, from simplified address resolution to more complex on-chain asset resolution. 
 
 	 Linagee names, for example are denoted by the top level domain (TLD) "**.og**".
 
-2. **Permanent Content Delivery Network**: Linagee Name Registrar enables easy access to permanent website storage by linking assets stored within the Ethereum Virtual Machine (EVM) to Linagee names. A prime example is **ecdn.og**, serving as an immutable and irrevocable Ethereum File Storage (EthFS) Content Delivery Network (CDN) that leverages Linagee's capabilities.
+2. **Permanent Content Delivery Network**: Enables easy access to permanent website storage by linking assets stored within the Ethereum Virtual Machine (EVM) to domain names. A prime example is **ecdn.og**, serving as an immutable and irrevocable Ethereum File Storage (EthFS) Content Delivery Network (CDN).
 
-3. **Semi-Permanent Assets in calldata**: Linagee Name Registrar empowers users to point their domain names to semi-permanent assets stored in calldata. This feature is explained further in Appendix E.
+3. **Semi-Permanent Assets in calldata**: Empowers users to point their domain names to semi-permanent assets stored in calldata. This feature is explained further in Appendix E.
 
 
 
@@ -53,7 +53,7 @@ The Registrar is a comprehensive solution composed of four main components, each
 		   - Returns the owner of a given name
    
 2. **Resolver Contract**
-   - The resolver contract allows users to link their Linagee names to their primary Ethereum address, providing a user-friendly means of address resolution. Additionally, the resolver contract permits users to delegate name control to another address without relinquishing ownership. Owners can also utilize this contract to set text records, which is particularly valuable for pointing to other on-chain assets.
+   - The resolver contract allows users to link their domain names to their primary Ethereum address, providing a user-friendly means of address resolution. Additionally, the resolver contract permits users to delegate name control to another address without relinquishing ownership. Owners can also utilize this contract to set text records, which is particularly valuable for pointing to other on-chain assets.
    - **Core functions:**
 	   - ```mapping(bytes32 => address) public resolveAddress; ```
 	   - ```mapping(bytes32 => address) public controller;  ```
